@@ -5,44 +5,65 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    readonly private float VELOCITY = 2.3f;
     readonly private float JUMPFORCE = 120f;
+    readonly private float SPEED = 240;
     
+    readonly private float sensitivity = 140.0f;
+    readonly private float clampAngle = 90.0f;
+ 
+    private float angleX; 
+    private float angleY; 
+
     Rigidbody rb;
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         
+        Vector3 angle = transform.localRotation.eulerAngles;
+        angleX = angle.x;
+        angleY = angle.y;
+        
     }
 
     void Update()
     {
-        //CONTROLS
+        //MOVEMENT
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * JUMPFORCE);
+            rb.AddForce(transform.up * JUMPFORCE);
         }
 
         if(Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector3.forward * VELOCITY);
+            rb.velocity = transform.forward * SPEED * Time.deltaTime;
         }
 
         if(Input.GetKey(KeyCode.S)){
 
-            rb.AddForce(Vector3.back * VELOCITY);
+            rb.velocity = -transform.forward * SPEED * Time.deltaTime;
         }
 
         if(Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector3.left * VELOCITY);
+            rb.velocity = -transform.right * SPEED * Time.deltaTime;
         }
 
         if(Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(Vector3.right * VELOCITY);
+            rb.velocity = transform.right * SPEED * Time.deltaTime;
         }
-        /////////////////////////////////////////
+
+        //LOOK
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = -Input.GetAxis("Mouse Y");
+ 
+        angleX += mouseY * sensitivity * Time.deltaTime;
+        angleY += mouseX * sensitivity * Time.deltaTime;
+ 
+        angleX = Mathf.Clamp(angleX, -clampAngle, clampAngle);
+ 
+        Quaternion localRotation = Quaternion.Euler(angleX, angleY, 0.0f);
+        transform.rotation = localRotation;
     }
 }
