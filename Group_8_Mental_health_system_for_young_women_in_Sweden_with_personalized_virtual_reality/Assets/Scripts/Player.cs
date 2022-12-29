@@ -5,7 +5,7 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    readonly private float VELOCITY = 2.3f;
+    readonly private float VELOCITY = 15f;
     readonly private float JUMPFORCE = 120f;
     
     Rigidbody rb;
