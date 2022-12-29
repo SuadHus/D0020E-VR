@@ -88,8 +88,4 @@ Library\Bee\artifacts\mvdfrm\UnityEngine.WindModule.dll_11668767ACC24ED1.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.XRModule.dll_2809DD9245FA4673.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.WebGL.Extensions.dll_C09EBF1CC28D25C3.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.WindowsStandalone.Extensions.dll_F86A919DFCAF3533.mvfrm
-<<<<<<< HEAD
-Library\Bee\artifacts\mvdfrm\Unity.Plastic.Newtonsoft.Json.dll_E17B4682C6D59258.mvfrm
-=======
-Library\Bee\artifacts\mvdfrm\Unity.Plastic.Newtonsoft.Json.dll_7C14491A68C70A4D.mvfrm
->>>>>>> remotes/origin/parkmodel_for_old_lady_scene
+Library\Bee\artifacts\mvdfrm\Unity.Plastic.Newtonsoft.Json.dll_69E04522D00EF5BE.mvfrm

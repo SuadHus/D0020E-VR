@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-C:\Users\linus\D0020E\D0020E-VR\VR_game
-=======
-C:\Users\Ante\d0020e-project\D0020E-VR\Group_8_Mental_health_system_for_young_women_in_Sweden_with_personalized_virtual_reality
->>>>>>> remotes/origin/parkmodel_for_old_lady_scene
+C:\Users\linus\D0020E\D0020E-VR\Group_8_Mental_health_system_for_young_women_in_Sweden_with_personalized_virtual_reality

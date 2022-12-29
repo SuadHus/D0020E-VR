@@ -22,10 +22,10 @@ public class PlankSpawner : MonoBehaviour
     {
         if(hasSpawned == false)
         {
-            Instantiate(plank, new Vector3(3, 0, 0), Quaternion.identity);
-            Instantiate(plank, new Vector3(-2, 0, -2), Quaternion.identity);
-            Instantiate(plank, new Vector3(4, 0, 5), Quaternion.identity);
-            Instantiate(plank, new Vector3(-0, 0, 2), Quaternion.identity);
+            Instantiate(plank, new Vector3(10, 0, 13), Quaternion.identity);
+            Instantiate(plank, new Vector3(7, 0, 10), Quaternion.identity);
+            Instantiate(plank, new Vector3(8, 0, 15), Quaternion.identity);
+            Instantiate(plank, new Vector3(11, 0, 10), Quaternion.identity);
         }
         hasSpawned = true;
     }
