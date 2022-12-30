@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public event Action gameStarted, ladyInteraction, plankPickedUp, sceneFinished;
+    public event Action gameStarted, ladyInteraction, ladyMeetDialogue, plankPickedUp, sceneFinished;
 
     private void Awake()
     {
@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("lady interaction");
         ladyInteraction?.Invoke(); 
+    }
+
+    public void NextLineLady()
+    {
+        Debug.Log("talking to lady");
+        ladyMeetDialogue?.Invoke();
     }
 
     public void PlankPickedUp()

@@ -5,6 +5,8 @@ using System;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     readonly private float JUMPFORCE = 120f;
     readonly private float SPEED = 22;
     
@@ -12,12 +14,14 @@ public class Player : MonoBehaviour
     readonly private float clampAngle = 90.0f;
  
     private float angleX; 
-    private float angleY; 
+    public float angleY; 
 
     Rigidbody rb;
     
     void Start()
     {
+        instance = this;
+
         rb = GetComponent<Rigidbody>();
         
         Vector3 angle = transform.localRotation.eulerAngles;
@@ -55,15 +59,17 @@ public class Player : MonoBehaviour
         }
 
         //LOOK
+        
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = -Input.GetAxis("Mouse Y");
  
-        angleX += mouseY * sensitivity * Time.deltaTime;
+        //angleX += mouseY * sensitivity * Time.deltaTime;
         angleY += mouseX * sensitivity * Time.deltaTime;
  
-        angleX = Mathf.Clamp(angleX, -clampAngle, clampAngle);
+        //angleX = Mathf.Clamp(angleX, -clampAngle, clampAngle);
  
         Quaternion localRotation = Quaternion.Euler(angleX, angleY, 0.0f);
         transform.rotation = localRotation;
+        
     }
 }
