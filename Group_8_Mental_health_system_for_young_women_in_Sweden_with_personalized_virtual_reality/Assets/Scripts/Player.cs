@@ -6,9 +6,9 @@ using System;
 public class Player : MonoBehaviour
 {
     readonly private float JUMPFORCE = 120f;
-    readonly private float SPEED = 15;
+    readonly private float SPEED = 22;
     
-    readonly private float sensitivity = 20.0f;
+    readonly private float sensitivity = 25.0f;
     readonly private float clampAngle = 90.0f;
  
     private float angleX; 
