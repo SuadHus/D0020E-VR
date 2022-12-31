@@ -28,11 +28,11 @@ public class CameraTest : MonoBehaviour
         float mouseY = -Input.GetAxis("Mouse Y");
  
         angleX += mouseY * sensitivity * Time.deltaTime;
-        //angleY += mouseX * sensitivity * Time.deltaTime;
+        angleY += mouseX * sensitivity * Time.deltaTime;
  
         angleX = Mathf.Clamp(angleX, -clampAngle, clampAngle);
  
-        Quaternion localRotation = Quaternion.Euler(angleX, Player.instance.angleY, 0.0f);
+        Quaternion localRotation = Quaternion.Euler(angleX, angleY, 0.0f);
         transform.rotation = localRotation;
     }
 }

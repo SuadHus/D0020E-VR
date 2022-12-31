@@ -5,16 +5,16 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    public static Player instance;
+    public Player instance;
 
     readonly private float JUMPFORCE = 120f;
-    readonly private float SPEED = 22;
+    readonly private float SPEED = 220;
     
     readonly private float sensitivity = 25.0f;
     readonly private float clampAngle = 90.0f;
  
     private float angleX; 
-    public float angleY; 
+    private float angleY; 
 
     Rigidbody rb;
     
